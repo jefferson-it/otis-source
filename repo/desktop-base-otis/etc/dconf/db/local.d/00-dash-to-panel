@@ -1,0 +1,11 @@
+[org/gnome/shell/extensions/dash-to-panel]
+panel-lengths='{"0":-1}'
+dot-style-focused='CILIORA'
+dot-style-unfocused='DASHES'
+panel-top-bottom-margins=8
+global-border-radius=5
+trans-use-custom-opacity=true
+trans-panel-opacity=0.7
+show-apps-icon-file='/usr/share/pixmaps/otis-icon.png'
+panel-sizes='{"0":55}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'

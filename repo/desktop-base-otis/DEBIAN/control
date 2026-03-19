@@ -1,0 +1,21 @@
+Package: desktop-base-otis
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends: otis-theme,
+         otis-wallpaper,
+         gnome-shell-extensions,
+         gnome-shell-extension-desktop-icons-ng,
+         gnome-shell-extension-user-theme,
+         gnome-shell-extension-dash-to-panel,
+         gnome-text-editor,
+         papirus-icon-theme,
+         flatpak,
+         gnome-software-plugin-flatpak,
+         ptyxis
+Maintainer: Jefferson Silva de Souza <jeff.silvadsouza@gmail.com>
+Description: Base de desktop do Otis
+ Base de desktop completa para o Otis, incluindo temas,
+ wallpapers e extensões do GNOME.
+ 

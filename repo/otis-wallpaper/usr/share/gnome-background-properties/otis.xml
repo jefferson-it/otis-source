@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+
+  <wallpaper>
+    <name>Mountain</name>
+    <filename>/usr/share/backgrounds/montain.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <wallpaper>
+    <name>Neon</name>
+    <filename>/usr/share/backgrounds/neon.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <wallpaper>
+    <name>Night Forest</name>
+    <filename>/usr/share/backgrounds/night-forest.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <wallpaper>
+    <name>Space</name>
+    <filename>/usr/share/backgrounds/space.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <wallpaper>
+    <name>Tech</name>
+    <filename>/usr/share/backgrounds/tech.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <wallpaper>
+    <name>Otis</name>
+    <filename>/usr/share/backgrounds/otis.png</filename>
+    <options>zoom</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+</wallpapers>

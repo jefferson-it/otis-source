@@ -1,0 +1,7 @@
+Package: otis-wallpaper
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64 
+Maintainer: Jefferson Silva de Souza <jeff.silvadsouza@gmail.com>
+Description: Wallpaper do Otis

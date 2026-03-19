@@ -1,0 +1,11 @@
+[Plymouth Theme]
+Name=Otis Text
+Description=Text mode theme
+ModuleName=text
+
+[ubuntu-text]
+title=ALINIX
+black=0x000000
+white=0xffffff
+brown=0x15a6f0
+blue=0xfaa483

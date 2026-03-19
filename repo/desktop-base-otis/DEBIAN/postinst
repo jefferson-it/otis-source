@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+flatpak install flathub io.missioncenter.MissionCenter -y
+
+dconf update 
+glib-compile-schemas /usr/share/glib-2.0/schemas
+gtk-update-icon-cache -f -t /usr/share/icons/otis
+update-desktop-database -q /usr/share/applications

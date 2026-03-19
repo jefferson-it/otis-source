@@ -1,0 +1,15 @@
+###################
+# global settings #
+###################
+
+[org.gnome.desktop.background]
+show-desktop-icons=true
+picture-uri='file:///usr/share/backgrounds/otis.png'
+picture-uri-dark='file:///usr/share/backgrounds/otis.png'
+
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+gtk-theme = 'otis'
+
+[org.gnome.shell.extensions.user-theme]
+name = 'otis'
