@@ -4,6 +4,7 @@ echo "Pegando a base do Debian"
 sudo debootstrap --variant=minbase stable ./rootfs http://deb.debian.org/debian      
 
 echo "Instalando pacotes essenciais na base..."
+./mount.sh
 sudo chroot /rootfs /bin/bash -c "
 apt update
 
@@ -31,6 +32,14 @@ dpkg -i desktop-base-dummy_999.0_all.deb
 
 rm desktop-base-dummy_999.0_all.deb 
 
+cat > /etc/apt/sources.list.d/otis.list << EOF
+deb [trusted=yes] https://jefferson-it.github.io/otis-repo/ stable main
+EOF
+
+apt update
+
+curl -fsS https://dl.brave.com/install.sh | sh
+
 apt install -y --no-install-recommends \
     linux-image-amd64 \
     linux-headers-amd64 \
@@ -38,15 +47,15 @@ apt install -y --no-install-recommends \
     grub-efi-amd64-bin \
     live-boot \
     plymouth \
-    plymouth-themes \
     zsh \
     curl \
     sudo \
     dkms \
     build-essential \
+    desktop-base-otis \
     git  -y
 
-apt install -y desktop-base-otis
+apt remove -y firefox yelp malcontent
 "
 
 sudo chroot /rootfs /bin/bash -c "
@@ -57,3 +66,4 @@ echo "live ALL=(ALL) NOPASSWD:ALL" >> /etc/sudo
 passwd -d live
 passwd root
 "
+./umount.sh
