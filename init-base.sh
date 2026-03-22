@@ -100,7 +100,7 @@ DEBIAN_FRONTEND=noninteractive apt install -y \
     firmware-misc-nonfree \
     network-manager \
     network-manager-gnome \
-    gtk2-engines-murrine \ 
+    gtk2-engines-murrine \
     gtk2-engines-pixbuf \
     sassc \
     libgtk-3-0 \
@@ -163,6 +163,28 @@ passwordRequirements:\
 ' /etc/calamares/modules/users.conf
 
 sed -i 's/- sources-final/- sources-final\n  - shellprocess/' /etc/calamares/settings.conf
+
+cat > /bin/reboot << 'EREBOOT'
+#!/bin/bash
+if [[ "$1" == "-f" ]]; then
+    systemctl reboot --force
+else
+    systemctl reboot
+fi
+EREBOOT
+
+cat > /bin/poweroff << 'EPOWEROFF'
+#!/bin/bash
+if [[ "$1" == "-f" ]]; then
+    systemctl poweroff -i
+else
+    systemctl poweroff
+fi
+EPOWEROFF
+
+chmod +x /bin/reboot
+chmod +x /bin/poweroff
+
 
 cat > /etc/calamares/modules/welcome.conf << 'EOW'
 ---
@@ -401,6 +423,7 @@ echo "root:root" | chpasswd
 echo "root:otis123" | chpasswd  # Use uma senha clara para testes
 
 apt autoremove -y || true
+apt full-upgrade -y || true
 apt clean
 
 EOF
