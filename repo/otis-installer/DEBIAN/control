@@ -1,9 +1,0 @@
-Package: otis-installer
-Version: 1.0.1
-Section: utils
-Priority: optional
-Architecture: amd64
-Maintainer: Jefferson Silva <seuemail@exemplo.com>
-Depends: libkf5coreaddons5, libkf5i18n5, libkf5kio5, qtbase5, qttools5
-Description: Instalador personalizado Otis baseado em Calamares
- Custom Calamares installer for Otis project.

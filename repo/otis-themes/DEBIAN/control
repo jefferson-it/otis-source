@@ -1,8 +1,8 @@
 Package: otis-theme
-Version: 1.0.1
+Version: 1.0.8
 Section: utils
 Priority: optional
 Architecture: amd64
-Depends: plymouth
+Depends: plymouth, plymouth-themes
 Maintainer: Jefferson Silva de Souza <jeff.silvadsouza@gmail.com>
 Description: Tema do Otis (GTK + Plymouth)

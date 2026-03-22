@@ -16,6 +16,12 @@ ISONAME="${ISONAME:-otis-live.iso}"
 # Parâmetros do boot "live"
 LIVE_KERNEL_PARAMS="${LIVE_KERNEL_PARAMS:-boot=live components quiet splash}"
 
+read -p "Recompilar/padronizar o rootFs[s/N]: " resposta
+resposta=${resposta,,} # minúscula
+if [[ "$resposta" == "s" || "$resposta" == "sim" || "$resposta" == "y" || "$resposta" == "yes" ]]; then
+   ./init-base.sh  
+fi
+
 # ---------- helpers ----------
 need() { command -v "$1" >/dev/null 2>&1 || { echo "Falta: $1"; exit 1; }; }
 
@@ -45,25 +51,15 @@ rm -rf /tmp/*
 
 apt autoremove -y
 apt clean
+dconf update
 "
 
 echo ">> Forçando tema Plymouth..."
 
-sudo chroot "$ROOTFS" /bin/bash <<'EOF'
-
-ln -sf /usr/share/plymouth/themes/otis-main/otis-main.plymouth \
-/usr/share/plymouth/themes/default.plymouth
-
-cat > /etc/plymouth/plymouthd.conf <<PLY
-[Daemon]
-Theme=otis-main
-ShowDelay=0
-DeviceTimeout=8
-PLY
-
+sudo chroot "$ROOTFS" /bin/bash -c "
 update-initramfs -u
-
-EOF
+glib-compile-schemas /usr/share/glib-2.0/schemas
+"
 
 need mksquashfs
 need grub-mkrescue
