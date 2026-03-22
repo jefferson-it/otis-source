@@ -99,7 +99,14 @@ DEBIAN_FRONTEND=noninteractive apt install -y \
     firmware-iwlwifi \
     firmware-misc-nonfree \
     network-manager \
-    network-manager-gnome
+    network-manager-gnome \
+    gtk2-engines-murrine \ 
+    gtk2-engines-pixbuf \
+    sassc \
+    libgtk-3-0 \
+    libgtk-4-1 \
+    tree \
+    adwaita-qt
 
 apt install -y --no-install-recommends calamares calamares-settings-debian
 
@@ -367,8 +374,6 @@ cp /usr/share/applications/otis-install.desktop /home/live/Desktop/otis-install.
 
 chown live:live /home/live/Desktop/otis-install.desktop
 chmod +x /home/live/Desktop/otis-install.desktop
-
-echo "GTK_THEME=otis" >> /etc/environment
 
 grep -q '^Defaults\s\+pwfeedback' /etc/sudoers || sed -i '/^Defaults/ a Defaults        pwfeedback' /etc/sudoers
 
