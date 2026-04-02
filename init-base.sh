@@ -96,6 +96,12 @@ DEBIAN_FRONTEND=noninteractive apt install -y \
     firmware-linux \
     firmware-linux-nonfree \
     firmware-realtek \
+    gnome-shell \
+    gnome-session \
+    gnome-settings-daemon \
+    adwaita-icon-theme \
+    gnome-themes-extra \
+    xdg-desktop-portal-gnome \
     firmware-iwlwifi \
     firmware-misc-nonfree \
     network-manager \

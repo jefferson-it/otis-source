@@ -16,7 +16,7 @@ ISONAME="${ISONAME:-otis-live.iso}"
 # Parâmetros do boot "live"
 LIVE_KERNEL_PARAMS="${LIVE_KERNEL_PARAMS:-boot=live components quiet splash}"
 
-read -p "Recompilar/padronizar o rootFs[s/N]: " resposta
+read -p "Recompilar/padronizar o rootFs [s/N]: " resposta
 resposta=${resposta,,} # minúscula
 if [[ "$resposta" == "s" || "$resposta" == "sim" || "$resposta" == "y" || "$resposta" == "yes" ]]; then
    ./init-base.sh  
